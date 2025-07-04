@@ -11,7 +11,7 @@ function Settings() {
             defaultValue="admin"
           />
         </label>
-        <button className="mt-4 px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
+        <button className="mt-4 px-4 py-2 bg-indigo-600 text-black rounded hover:bg-indigo-700">
           Save Settings
         </button>
       </div>

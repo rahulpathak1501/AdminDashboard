@@ -1,14 +1,26 @@
-function Reports() {
+import React from "react";
+import ReportCard from "../components/ReportCard";
+import ReportChart from "../components/ReportChart";
+import ReportTable from "../components/ReportTable";
+
+const Reports = () => {
+  const metrics = [
+    { title: "New Signups", value: 340 },
+    { title: "Report Downloads", value: 1200 },
+    { title: "Active Users", value: 890 },
+  ];
+
   return (
-    <div className="space-y-4">
-      <h2 className="text-2xl font-bold">Reports</h2>
-      <p>Generate and view detailed reports here.</p>
-      {/* Placeholder chart or data can be added */}
-      <div className="p-4 bg-white rounded shadow">
-        <p className="text-gray-600">Report functionality coming soon...</p>
+    <div className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {metrics.map((item, index) => (
+          <ReportCard key={index} {...item} />
+        ))}
       </div>
+      <ReportChart />
+      <ReportTable />
     </div>
   );
-}
+};
 
 export default Reports;
